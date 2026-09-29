@@ -1,0 +1,14 @@
+name: compare-documents
+description: Compares two documents algorithmically to find differences.
+input_schema:
+  type: object
+  properties:
+    text1:
+      type: string
+      description: The first document text.
+    text2:
+      type: string
+      description: The second document text.
+  required:
+    - text1
+    - text2

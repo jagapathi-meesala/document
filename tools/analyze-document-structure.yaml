@@ -1,0 +1,10 @@
+name: analyze-document-structure
+description: Analyzes the structure of extracted text based on deterministic heuristics.
+input_schema:
+  type: object
+  properties:
+    text:
+      type: string
+      description: The extracted text to analyze.
+  required:
+    - text

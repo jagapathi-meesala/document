@@ -1,0 +1,13 @@
+name: extract-document-text
+description: Extracts raw text from a supported document (TXT or PDF).
+input_schema:
+  type: object
+  properties:
+    source_path:
+      type: string
+      description: Path to the document.
+    max_pages:
+      type: integer
+      description: Maximum pages to extract (PDF only).
+  required:
+    - source_path

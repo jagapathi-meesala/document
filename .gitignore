@@ -1,0 +1,27 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.log
+sample_document.txt
+sample_comparison.txt
+
+# Local environments
+venv/
+.venv/
+
+# Python caches
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Download/install archives
+*.tar.xz
+*.zip

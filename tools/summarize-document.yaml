@@ -1,0 +1,13 @@
+name: summarize-document
+description: Generates an extractive summary of the document text.
+input_schema:
+  type: object
+  properties:
+    text:
+      type: string
+      description: The extracted text to summarize.
+    max_sentences:
+      type: integer
+      description: Maximum number of sentences in the summary.
+  required:
+    - text

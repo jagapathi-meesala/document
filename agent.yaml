@@ -1,0 +1,10 @@
+name: document-intelligence-agent
+version: 0.1.0
+description: A deterministic document intelligence agent that extracts text, analyzes structure, and extracts key information from PDF and TXT files.
+spec_version: 0.1.0
+tools:
+  - extract-document-text
+  - analyze-document-structure
+  - extract-key-information
+  - summarize-document
+  - compare-documents

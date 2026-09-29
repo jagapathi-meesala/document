@@ -1,0 +1,16 @@
+name: extract-key-information
+description: Extracts requested key fields from document text based on deterministic heuristics.
+input_schema:
+  type: object
+  properties:
+    text:
+      type: string
+      description: The extracted text to analyze.
+    requested_fields:
+      type: array
+      items:
+        type: string
+      description: List of fields to extract (e.g. title, author, date).
+  required:
+    - text
+    - requested_fields

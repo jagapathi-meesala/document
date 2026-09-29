@@ -1,0 +1,47 @@
+checkpoint_1_manifest_validity:
+  requirement: "agent.yaml must conform exactly to the OpenGAP 0.1.0 specification."
+  implementation: "Create a strictly compliant agent.yaml using the required fields and only valid optional fields."
+  documentation: "Referenced in README.md and validated in CI."
+  local_test: "Run hidevs_readiness_audit.py and opengap validate CLI."
+  evidence: "NOT LOCALLY VERIFIABLE until GitHub push, but local tests will capture output."
+  status: "PENDING"
+
+checkpoint_2_tools_definition:
+  requirement: "Tools must have corresponding valid YAML definitions and implementations."
+  implementation: "Create 5 compliant tool YAMLs and Python implementations in tools/."
+  documentation: "Described in EXPLAINABILITY.md."
+  local_test: "AgentCore test for tool discovery."
+  evidence: "Test logs."
+  status: "PENDING"
+
+checkpoint_3_dynamic_registry:
+  requirement: "Agent must dynamically discover tools instead of hardcoding."
+  implementation: "DynamicToolRegistry scans tools/ directory for YAMLs and registers them."
+  documentation: "Described in EXPLAINABILITY.md and README.md."
+  local_test: "test_registry.py verifies dynamic discovery."
+  evidence: "Test logs."
+  status: "PENDING"
+
+checkpoint_4_framework_independence:
+  requirement: "Core business logic must not depend on LangChain, CrewAI, etc."
+  implementation: "AgentCore and tools are written in pure Python without external agent framework SDKs."
+  documentation: "Documented in AGENTS.md and EXPLAINABILITY.md."
+  local_test: "test_agent_core.py executes successfully without any framework installed."
+  evidence: "Test logs."
+  status: "PENDING"
+
+checkpoint_5_security_and_secrets:
+  requirement: "No hardcoded secrets, .env ignored, no dangerous execution."
+  implementation: "Use .env.example, .gitignore, and deterministic document processing without eval()."
+  documentation: "Documented in README.md Security section."
+  local_test: "Run verification/security_audit.py."
+  evidence: "Audit output."
+  status: "PENDING"
+
+checkpoint_6_hidevs_passport_issuance:
+  requirement: "HiDevs platform clones repository, validates, and issues Passport."
+  implementation: "Submit compliant repository."
+  documentation: "HiDevs status section in README.md."
+  local_test: "NOT LOCALLY VERIFIABLE."
+  evidence: "NOT VERIFIED."
+  status: "PENDING"
